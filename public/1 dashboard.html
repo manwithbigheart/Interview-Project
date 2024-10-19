@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <title>Dashboard Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="min-h-screen bg-white flex items-center justify-between">
+      <!-- Contact Link in Top-Right -->
+      <div class="absolute top-4 right-9">
+        <a href="#" class="text-gray-600 text-sm font-medium">Contact</a>
+      </div>
+
+      <!-- Left Section (Text & Logo) -->
+      <div class="w-1/2 p-8 flex flex-col justify-center">
+        <div class="absolute top-4 left-4">
+          <img
+            alt="Cuvette logo"
+            class="mb-4"
+            height="50"
+            src="https://cuvette.tech/assets/images/cuvette.svg"
+            width="150"
+          />
+        </div>
+        <p class="text-gray-600 text-lg mt-12 max-w-md">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley.
+        </p>
+      </div>
+
+      <!-- Right Section (Form) -->
+      <div class="w-1/2 pr-8 flex justify-center">
+        <div
+          class="bg-white p-8 rounded-lg shadow-lg border border-gray-200 max-w-sm"
+        >
+          <h2 class="text-2xl font-semibold mb-2 text-center">Sign Up</h2>
+          <p class="text-gray-500 mb-6 text-center">
+            Lorem Ipsum is simply dummy text
+          </p>
+          <form>
+            <div class="mb-4 relative">
+              <i class="fas fa-user absolute left-3 top-3 text-gray-400"></i>
+              <input
+                class="shadow appearance-none border rounded w-full py-2 pl-10 pr-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="name"
+                placeholder="Name"
+                type="text"
+              />
+            </div>
+            <div class="mb-4 relative">
+              <i class="fas fa-phone absolute left-3 top-3 text-gray-400"></i>
+              <input
+                class="shadow appearance-none border rounded w-full py-2 pl-10 pr-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="phone"
+                placeholder="Phone no."
+                type="number"
+              />
+            </div>
+            <div class="mb-4 relative">
+              <i
+                class="fas fa-building absolute left-3 top-3 text-gray-400"
+              ></i>
+              <input
+                class="shadow appearance-none border rounded w-full py-2 pl-10 pr-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="company-name"
+                placeholder="Company Name"
+                type="text"
+              />
+            </div>
+            <div class="mb-4 relative">
+              <i
+                class="fas fa-envelope absolute left-3 top-3 text-gray-400"
+              ></i>
+              <input
+                class="shadow appearance-none border rounded w-full py-2 pl-10 pr-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="company-email"
+                placeholder="Company Email"
+                type="email"
+              />
+            </div>
+            <div class="mb-4 relative">
+              <i class="fas fa-users absolute left-3 top-3 text-gray-400"></i>
+              <input
+                class="shadow appearance-none border rounded w-full py-2 pl-10 pr-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="employee-size"
+                placeholder="Employee Size"
+                type="text"
+              />
+            </div>
+            <p class="text-gray-500 text-sm mb-4 text-center">
+              By clicking on proceed you will accept our
+              <a class="text-blue-500" href="#">Terms & Conditions</a>
+            </p>
+            <!-- Link to Sign Up page -->
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
+              type="button"
+              onclick="window.location.href='signup.html';"
+            >
+              Proceed
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

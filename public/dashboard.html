@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white">
+    <header
+      class="flex justify-between items-center p-4 border-b border-gray-200"
+    >
+      <div class="flex items-center">
+        <img
+          alt="Cuvette logo"
+          class="mr-2"
+          height="50"
+          src="https://cuvette.tech/assets/images/cuvette.svg"
+          width="150"
+        />
+      </div>
+      <div class="flex items-center space-x-4">
+        <a class="text-gray-600" href="#"> Contact </a>
+        <div
+          class="rounded-full bg-blue-600 text-white px-3 py-1 cursor-pointer"
+        >
+          Dash
+        </div>
+      </div>
+    </header>
+
+    <main class="py-10">
+      <div class="text-center">
+        <h1 class="text-3xl font-bold mb-6">Welcome to your Dashboard</h1>
+        <button
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          type="button"
+          onclick="window.location.href='create_interview.html';"
+        >
+          Create Interview
+        </button>
+      </div>
+    </main>
+  </body>
+</html>

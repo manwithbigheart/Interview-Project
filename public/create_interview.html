@@ -1,0 +1,150 @@
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.js"></script>
+  </head>
+  <body class="bg-gray-100">
+    <div class="flex justify-between items-center p-4 bg-white shadow">
+      <div class="flex items-center">
+        <img
+          alt="Company Logo"
+          class="mr-2"
+          height="50"
+          src="https://cuvette.tech/assets/images/cuvette.svg"
+          width="150"
+        />
+      </div>
+      <div class="flex items-center">
+        <a class="text-gray-600 mr-4" href="#"> Contact </a>
+        <div class="flex items-center border rounded-full px-3 py-1">
+          <img
+            alt="Profile Picture"
+            class="w-6 h-6 rounded-full mr-2"
+            height="30"
+            src="https://storage.googleapis.com/a1aa/image/NwDyCZf18DS6RyhzGVhXjxnyjQyt6Qey3BKcYQSGHwNJCQoTA.jpg"
+            width="30"
+          />
+          <span class="text-gray-600 mr-2"> Your Name </span>
+          <i class="fas fa-chevron-down text-gray-600"> </i>
+        </div>
+      </div>
+    </div>
+    <div class="flex">
+      <div class="w-1/6 bg-white shadow h-screen">
+        <div class="p-4">
+          <i class="fas fa-home text-gray-600 text-2xl"> </i>
+        </div>
+      </div>
+      <!-- Reduced form container width from w-5/6 to w-2/3 -->
+      <div class="w-2/3 p-8">
+        <form class="space-y-6">
+          <div class="flex items-center">
+            <label class="w-1/4 text-gray-700" for="job-title">
+              Job Title
+            </label>
+            <input
+              class="w-3/4 border rounded px-4 py-2"
+              id="job-title"
+              placeholder="Enter Job Title"
+              type="text"
+            />
+          </div>
+          <div class="flex items-center">
+            <label class="w-1/4 text-gray-700" for="job-description">
+              Job Description
+            </label>
+            <textarea
+              class="w-3/4 border rounded px-4 py-2"
+              id="job-description"
+              placeholder="Enter Job Description"
+            ></textarea>
+          </div>
+          <div class="flex items-center">
+            <label class="w-1/4 text-gray-700" for="experience-level">
+              Experience Level
+            </label>
+            <select
+              class="w-3/4 border rounded px-4 py-2"
+              id="experience-level"
+            >
+              <option>Select Experience Level</option>
+            </select>
+          </div>
+          <div class="flex items-center">
+            <label class="w-1/4 text-gray-700" for="add-candidate">
+              Add Candidate
+            </label>
+            <div class="w-3/4">
+              <div class="flex items-center border rounded px-4 py-2">
+                <input
+                  class="w-full"
+                  id="add-candidate"
+                  placeholder="Enter email"
+                  type="email"
+                  onkeydown="if(event.key === 'Enter') { event.preventDefault(); addEmail(); }"
+                />
+              </div>
+              <div class="mt-2" id="email-list"></div>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <label class="w-1/4 text-gray-700" for="end-date"> End Date </label>
+            <div class="w-3/4 flex items-center border rounded px-4 py-2">
+              <input
+                class="w-full"
+                id="end-date"
+                placeholder="Select a Date"
+                type="text"
+              />
+              <i
+                class="fas fa-calendar-alt text-gray-600 ml-2 cursor-pointer"
+                onclick="openCalendar()"
+              >
+              </i>
+            </div>
+          </div>
+          <div class="flex justify-end">
+            <button
+              class="bg-blue-600 text-white px-6 py-2 rounded"
+              type="submit"
+            >
+              Send
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      function addEmail() {
+        const emailInput = document.getElementById("add-candidate");
+        const emailList = document.getElementById("email-list");
+        if (emailInput.value) {
+          const emailTag = document.createElement("span");
+          emailTag.className =
+            "bg-gray-200 rounded-full px-3 py-1 text-gray-700 mr-2 inline-flex items-center";
+          emailTag.innerHTML = `${emailInput.value} <i class="fas fa-times ml-2 cursor-pointer" onclick="removeEmail(this)"></i>`;
+          emailList.appendChild(emailTag);
+          emailInput.value = "";
+        }
+      }
+      function removeEmail(element) {
+        element.parentElement.remove();
+      }
+      function openCalendar() {
+        flatpickr("#end-date", {
+          onReady: function (selectedDates, dateStr, instance) {
+            instance.open();
+          },
+        });
+      }
+    </script>
+  </body>
+</html>

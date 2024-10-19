@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <title>Sign Up Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-white flex items-center justify-center h-screen">
+    <!-- Top Navigation (Logo and Contact) -->
+    <div
+      class="absolute top-0 left-0 w-full flex justify-between items-center p-4"
+    >
+      <div class="flex items-center">
+        <!-- Logo -->
+        <img
+          alt="Cuvette logo"
+          class="mr-2"
+          height="50"
+          src="https://cuvette.tech/assets/images/cuvette.svg"
+          width="150"
+        />
+      </div>
+      <!-- Contact Link -->
+      <div>
+        <a class="text-lg font-medium" href="#">Contact</a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex w-full max-w-6xl mx-auto">
+      <!-- Left Section (Text) -->
+      <div class="w-1/2 flex items-center">
+        <p class="text-gray-600 text-lg text-center">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.
+        </p>
+      </div>
+
+      <!-- Right Section (Sign Up Form) -->
+      <div class="w-1/2 flex justify-center items-center">
+        <div class="border border-gray-300 rounded-lg p-10 shadow-lg w-96">
+          <h2 class="text-2xl font-bold mb-4 text-center">Sign Up</h2>
+          <p class="text-gray-500 mb-6 text-center">
+            Lorem Ipsum is simply dummy text
+          </p>
+
+          <!-- Email OTP Input -->
+          <div class="mb-4">
+            <div class="flex items-center border rounded-lg p-2 mb-2">
+              <i class="fas fa-envelope text-gray-500 mr-2"></i>
+              <input
+                class="flex-1 outline-none"
+                placeholder="Email OTP"
+                type="text"
+              />
+            </div>
+            <button
+              class="w-full bg-blue-500 text-white py-2 rounded-lg"
+              onclick="window.location.href='dashboard.html';"
+            >
+              Verify
+            </button>
+          </div>
+
+          <!-- Mobile OTP Input -->
+          <div>
+            <div class="flex items-center border rounded-lg p-2 mb-2">
+              <i class="fas fa-phone text-gray-500 mr-2"></i>
+              <input
+                class="flex-1 outline-none"
+                placeholder="Mobile OTP"
+                type="text"
+              />
+            </div>
+            <button
+              class="w-full bg-blue-500 text-white py-2 rounded-lg"
+              onclick="window.location.href='dashboard.html';"
+            >
+              Verify
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
